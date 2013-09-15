@@ -1,4 +1,4 @@
 dmontaner.github.io
 ===================
 
-my home page
+just my home page
