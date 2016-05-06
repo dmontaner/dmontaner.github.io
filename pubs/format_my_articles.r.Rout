@@ -1,0 +1,203 @@
+
+R version 3.2.5 (2016-04-14) -- "Very, Very Secure Dishes"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> ##format_my_articles.r
+> ##2016-04-23 david.montaner@gmail.com
+> ##Format my articles from PubMed XML file
+> 
+> ## Download the file collection.xml
+> ## from pubmed.dmontaner.com as:
+> ## Send to > File > Format = XML
+> 
+> options (width = 130)
+> 
+> date ()
+[1] "Wed Apr 27 16:16:01 2016"
+> Sys.info ()[c("nodename", "user")]
+   nodename        user 
+      "air" "dmontaner" 
+> commandArgs ()
+[1] "/usr/lib/R/bin/exec/R"                                             
+[2] "-f"                                                                
+[3] "/home/dmontaner/Documents/wikis/home_git/pubs/format_my_articles.r"
+[4] "--restore"                                                         
+[5] "--save"                                                            
+[6] "--no-readline"                                                     
+[7] "--no-save"                                                         
+[8] "--no-restore"                                                      
+> rm (list = ls ())
+> R.version.string ##"R version 3.2.5 (2016-04-14)"
+[1] "R version 3.2.5 (2016-04-14)"
+> library (xml2); packageDescription ("xml2", fields = "Version") #"0.1.2"
+[1] "0.1.2"
+> ##help (package = xml2)
+> 
+> 
+> ### DATOS
+> datos <- read_xml ("collection.xml")
+> datos <- as_list (datos)
+> 
+> table (sapply (datos, length))
+
+ 1 
+50 
+> datos <- lapply (datos, unlist, recursive = FALSE) ## eliminate first list layer
+> table (sapply (datos, length))
+
+ 8 
+50 
+> unique (t (sapply (datos, names))) ## OK same order
+                [,1]    [,2]  [,3]          [,4]      [,5]       [,6]   [,7]          [,8]        
+DocumentSummary "Title" "URL" "Description" "Details" "Resource" "Type" "Identifiers" "Properties"
+> 
+> lon <- t (sapply (datos, sapply, length))
+> head (lon)  ## Identifiers may have different lengths; this will break as.data.frame
+                Title URL Description Details Resource Type Identifiers Properties
+DocumentSummary     1   1           1       1        1    1           1          0
+DocumentSummary     1   1           1       1        1    1           1          0
+DocumentSummary     1   1           1       1        1    1           2          0
+DocumentSummary     1   1           1       1        1    1           1          0
+DocumentSummary     1   1           1       1        1    1           1          0
+DocumentSummary     1   1           1       1        1    1           2          0
+> 
+> fuera <- which (colnames (lon) == "Identifiers")
+> fuera
+[1] 7
+> datos <- lapply (datos, "[", - fuera) ## now all elements of datos should have the same structure
+> 
+> datos <- t (sapply (datos, unlist)) ## matrix
+> datos <- as.data.frame (datos, stringsAsFactors = FALSE)
+> 
+> head (datos)
+                                                                                                                                        Title
+DocumentSummary     Brief Report: Inhibition of miR-145 Enhances Reprogramming of Human Dermal Fibroblasts to Induced Pluripotent Stem Cells.
+DocumentSummary.1 Family-based genome-wide association study in Patagonia confirms the association of the DMD locus and cleft lip and palate.
+DocumentSummary.2                                              Babelomics 5.0: functional interpretation for new generations of genomic data.
+DocumentSummary.3                 Therapeutic targets for olive pollen allergy defined by gene markers modulated by Ole e 1-derived peptides.
+DocumentSummary.4                                                                    A new overgrowth syndrome is due to mutations in RNF125.
+DocumentSummary.5                                               Understanding disease mechanisms with models of signaling pathway activities.
+                               URL                                                                   Description
+DocumentSummary   /pubmed/26418476                  Barta T, Peskova L, Collin J, Montaner D, Neganova I, et al.
+DocumentSummary.1 /pubmed/26331285          Fonseca RF, de Carvalho FM, Poletta FA, Montaner D, Dopazo J, et al.
+DocumentSummary.2 /pubmed/25897133 Alonso R, Salavert F, Garcia-Garcia F, Carbonell-Caballero J, Bleda M, et al.
+DocumentSummary.3 /pubmed/25553522                      Calzada D, Aguerri M, Baos S, Montaner D, Mata M, et al.
+DocumentSummary.4 /pubmed/25196541       Tenorio J, Mansilla A, Valencia M, Martínez-Glez V, Romanelli V, et al.
+DocumentSummary.5 /pubmed/25344409            Sebastian-Leon P, Vidal E, Minguez P, Conesa A, Tarazona S, et al.
+                                                         Details Resource Type.Type
+DocumentSummary   Stem cells (Dayton, Ohio). 2016; 34(1):246-51.   PubMed   journal
+DocumentSummary.1      European journal of oral sciences. 2015;    PubMed   journal
+DocumentSummary.2  Nucleic acids research. 2015; 43(W1):W117-21.   PubMed   journal
+DocumentSummary.3      Molecular immunology. 2015; 64(2):252-61.   PubMed   journal
+DocumentSummary.4          Human mutation. 2014; 35(12):1436-41.   PubMed   journal
+DocumentSummary.5              BMC systems biology. 2014; 8:121.   PubMed   journal
+> 
+> datos[,'auth.md'] <- sub ('Montaner D', '**Montaner D**', datos[,'Description'])  ## bold
+> datos[,'auth.tw'] <- sub ('Montaner D', "''Montaner D''", datos[,'Description'])  ## bold
+> 
+> ### MARKDOWN
+> datos[,'md'] <- paste0 ('1. _', datos[,'Title'], '_ ', datos[,'auth.md'],
++                         " [", datos[,'Details'], "](http://www.ncbi.nlm.nih.gov/", datos[,'URL'], ')')
+> 
+> ### TiddlyWiki
+> datos[,'tw'] <- paste0 ('# //', datos[,'Title'], '// ', datos[,'auth.tw'],
++                         " [[", datos[,'Details'], "|http://www.ncbi.nlm.nih.gov/", datos[,'URL'], ']]')
+> 
+> 
+> ## many et. al
+> table (grepl ('Montaner D', datos[,'Description']))
+
+FALSE  TRUE 
+   18    32 
+> grep ('Montaner D', datos[,'Description'], invert = TRUE, value = TRUE)
+ [1] "Alonso R, Salavert F, Garcia-Garcia F, Carbonell-Caballero J, Bleda M, et al."               
+ [2] "Tenorio J, Mansilla A, Valencia M, Martínez-Glez V, Romanelli V, et al."                     
+ [3] "Sebastian-Leon P, Vidal E, Minguez P, Conesa A, Tarazona S, et al."                          
+ [4] "Galan A, Diaz-Gimeno P, Poo ME, Valbuena D, Sanchez E, et al."                               
+ [5] "Fernández RM, Bleda M, Núñez-Torres R, Medina I, Luzón-Toro B, et al."                       
+ [6] "Koziol A, Gonzalo P, Mota A, Pollán Á, Lorenzo C, et al."                                    
+ [7] "Prieur X, Mok CY, Velagapudi VR, Núñez V, Fuentes L, et al."                                 
+ [8] "Shi L, Campbell G, Jones WD, Campagne F, Wen Z, et al."                                      
+ [9] "Medina I, Carbonell J, Pulido L, Madeira SC, Goetz S, et al."                                
+[10] "Prado-Lopez S, Conesa A, Armiñán A, Martínez-Losa M, Escobedo-Lucea C, et al."               
+[11] "Moreno-Manzano V, Rodríguez-Jiménez FJ, Aceña-Bonilla JL, Fustero-Lardíes S, Erceg S, et al."
+[12] "Bediaga NG, Acha-Sagredo A, Guerra I, Viguri A, Albaina C, et al."                           
+[13] "Conesa A, Bro R, García-García F, Prats JM, Götz S, et al."                                  
+[14] "Tárraga J, Medina I, Carbonell J, Huerta-Cepas J, Minguez P, et al."                         
+[15] "Al-Shahrour F, Carbonell J, Minguez P, Goetz S, Conesa A, et al."                            
+[16] "Montero-Conde C, Martín-Campos JM, Lerma E, Gimenez G, Martínez-Guitarte JL, et al."         
+[17] "Al-Shahrour F, Minguez P, Tárraga J, Medina I, Alloza E, et al."                             
+[18] "Al-Shahrour F, Arbiza L, Dopazo H, Huerta-Cepas J, Mínguez P, et al."                        
+> 
+> ## order
+> 
+> ### SAVE
+> ## markdown
+> writeLines (datos[,'md'], con = "dmontaner_pubications.md")
+> ##writeLines (datos[,'md'], con = "dmontaner_pubications.md", sep = "  \n\n")
+> ## tiddlywiki
+> writeLines (datos[,'tw'], con = "dmontaner_pubications.tw")
+> ##writeLines (datos[,'md'], con = "dmontaner_pubications.md", sep = "  \n\n")
+> 
+> ################################################################################
+> 
+> ###PANDOC
+> 
+> system ("pandoc -S -f markdown -t docx  -o dmontaner_pubications.docx dmontaner_pubications.md")
+> #system ("pandoc    -f markdown -t docx  -o dmontaner_pubications.docx dmontaner_pubications.md")
+> 
+> system ("pandoc -S -f markdown -t latex -o dmontaner_pubications.pdf dmontaner_pubications.md")
+> #system ("pandoc    -f markdown -t latex -o dmontaner_pubications.pdf dmontaner_pubications.md")
+> 
+> system ("pandoc -S -H html.sty -f markdown -t html -o dmontaner_pubications.html dmontaner_pubications.md")
+> #system ("pandoc    -H html.sty -f markdown -t html -o dmontaner_pubications.html dmontaner_pubications.md")
+> 
+> system ("pandoc -S -f markdown -t plain -o dmontaner_pubications.txt dmontaner_pubications.md") ## does not remove __ and **
+> #system ("pandoc    -f markdown -t plain -o dmontaner_pubications.txt dmontaner_pubications.md")
+> 
+> system ("pandoc -S -f markdown -t latex -o dmontaner_pubications.tex dmontaner_pubications.md")
+> #system ("pandoc    -f markdown -t latex -o dmontaner_pubications.tex dmontaner_pubications.md")
+> 
+> #system ("pandoc -S --self-contained  -f markdown -t latex -o dmontaner_pubications_self.tex dmontaner_pubications.md")
+> 
+> 
+> ###EXIT
+> warnings ()
+NULL
+> sessionInfo ()
+R version 3.2.5 (2016-04-14)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 14.04.4 LTS
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C               LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8    LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C             LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] xml2_0.1.2
+
+loaded via a namespace (and not attached):
+[1] tools_3.2.5 Rcpp_0.12.4
+> q ("no")
+> proc.time()
+   user  system elapsed 
+  1.388   0.104   1.508 
