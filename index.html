@@ -139,9 +139,15 @@ Error message and password prompt
 
 <li>$:/favicon.ico</li>
 
+<li>$:/GoogleAnalyticsAccount</li>
+
+<li>$:/GoogleAnalyticsDomain</li>
+
 <li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
+
+<li>$:/plugins/tiddlywiki/googleanalytics</li>
 
 <li>$:/plugins/tiddlywiki/markdown</li>
 
@@ -6484,6 +6490,12 @@ Teaching
 <div created="20160422140100550" modified="20160422140131893" title="$:/favicon.ico" type="image/png">
 <pre>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</pre>
 </div>
+<div created="20160509220651223" modified="20160509220653542" title="$:/GoogleAnalyticsAccount">
+<pre>UA-16918742-2</pre>
+</div>
+<div created="20160509220256510" modified="20160509220336774" title="$:/GoogleAnalyticsDomain">
+<pre>www.dmontaner.com</pre>
+</div>
 <div plugin-type="import" status="pending" title="$:/Import" type="application/json">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -6496,6 +6508,26 @@ Teaching
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
+</div>
+<div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="Google Analytics: website statistics" list="readme usage" plugin-type="plugin" title="$:/plugins/tiddlywiki/googleanalytics" type="application/json" version="5.1.11">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/plugins/tiddlywiki/googleanalytics/googleanalytics.js&quot;: {
+            &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/tiddlywiki/googleanalytics/googleanalytics.js\ntype: application/javascript\nmodule-type: startup\n\nRuns Google Analytics with the account number in the tiddler `$:/GoogleAnalyticsAccount` and the domain name in `$:/GoogleAnalyticsDomain`\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\n// Export name and synchronous status\nexports.name = \&quot;google-analytics\&quot;;\nexports.platforms = [\&quot;browser\&quot;];\nexports.synchronous = true;\n\nvar GOOGLE_ANALYTICS_ACCOUNT = \&quot;$:/GoogleAnalyticsAccount\&quot;,\n\tGOOGLE_ANALYTICS_DOMAIN = \&quot;$:/GoogleAnalyticsDomain\&quot;;\n\nexports.startup = function() {\n\twindow._gaq = window._gaq || [];\n\t_gaq.push([\&quot;_setAccount\&quot;, $tw.wiki.getTiddlerText(GOOGLE_ANALYTICS_ACCOUNT)]);\n\t_gaq.push([\&quot;_setDomainName\&quot;, $tw.wiki.getTiddlerText(GOOGLE_ANALYTICS_DOMAIN)]);\n\t_gaq.push([\&quot;_trackPageview\&quot;]);\n\tvar ga = document.createElement(\&quot;script\&quot;);\n\tga.type = \&quot;text/javascript\&quot;;\n\tga.async = true;\n\tga.src = (\&quot;https:\&quot; == document.location.protocol ? \&quot;https://ssl\&quot; : \&quot;http://www\&quot;) + \&quot;.google-analytics.com/ga.js\&quot;;\n\tdocument.body.appendChild(ga);\n};\n\n})();\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/googleanalytics/googleanalytics.js&quot;,
+            &quot;type&quot;: &quot;application/javascript&quot;,
+            &quot;module-type&quot;: &quot;startup&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/googleanalytics/readme&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/googleanalytics/readme&quot;,
+            &quot;text&quot;: &quot;This plugin enables you to use Google Analytics to track access to your online TiddlyWiki document.\n\n[[Source code|https://github.com/Jermolene/TiddlyWiki5/blob/master/plugins/tiddlywiki/googleanalytics]]\n&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/googleanalytics/usage&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/googleanalytics/usage&quot;,
+            &quot;text&quot;: &quot;These instructions assume you are using TiddlySpot to publish your wiki.\n\n# Go to the Google Analytics website: http://www.google.com/analytics/\n# Click the ''Access Google Analytics'' button and follow instructions to set up your account\n# Enter the name of your TiddlySpot domain, for example \&quot;mysite.tiddlyspot.com\&quot; \n# You will be given your own Tracking ID for this domain\n# Go to http://tiddlywiki.com -- open the More/System tab and drag the links to these three tiddlers across to a local copy of your site:\n#* [[$:/GoogleAnalyticsDomain]]\n#* [[$:/GoogleAnalyticsAccount]]\n#* [[$:/plugins/tiddlywiki/googleanalytics]]\n# Edit the first two of these tiddlers to reflect your Domain and Tracking ID\n# Upload the new version to TiddlySpot or other web host\n# Return to your Google Analytics page to check that your site is being tracked\n\n&quot;
+        }
+    }
+}</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="Markdown parser" list="readme usage" plugin-type="plugin" title="$:/plugins/tiddlywiki/markdown" type="application/json" version="5.1.11">
 <pre>{
@@ -6544,19 +6576,19 @@ Teaching
 <div created="20160416182542293" modified="20160506221042274" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20160419220018607" modified="20160505224409611" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+<div created="20160419220018607" modified="20160509221130748" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Theme</pre>
 </div>
-<div created="20160505224221322" modified="20160505224221322" title="$:/state/tab--2112689675">
-<pre>$:/core/ui/ControlPanel/Basics</pre>
+<div created="20160505224221322" modified="20160509221123971" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Advanced</pre>
 </div>
-<div created="20160416162831121" modified="20160416162831121" title="$:/state/tab--86143343">
-<pre>$:/core/ui/ControlPanel/Plugins/Installed/Themes</pre>
+<div created="20160416162831121" modified="20160509220127561" title="$:/state/tab--86143343">
+<pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
 <div created="20160416162841200" modified="20160416162902426" title="$:/state/tab-1342078386">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Plugins</pre>
 </div>
-<div created="20160416162823037" modified="20160505224404383" title="$:/state/tab-1749438307">
+<div created="20160416162823037" modified="20160509221127131" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20160416182211249" modified="20160506224720040" title="$:/state/tab/moresidebar--15786239">
@@ -6568,7 +6600,7 @@ Teaching
 <div created="20160416162807706" modified="20160416170930768" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div created="20160416182209170" modified="20160506232140081" title="$:/state/tab/sidebar-605931389">
+<div created="20160416182209170" modified="20160509214044042" title="$:/state/tab/sidebar-605931389">
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20160505224335483" modified="20160506232208482" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -6586,7 +6618,7 @@ Teaching
 <div created="20160416171143034" modified="20160506234116656" title="$:/state/toc/TableOfContents-Teaching-749439272">
 <pre>close</pre>
 </div>
-<div list="myadmin About Contact Genometra Research Software Teaching" title="$:/StoryList">
+<div list="myadmin $:/GoogleAnalyticsDomain About Contact Genometra Research Software Teaching" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -6906,13 +6938,13 @@ This plugin contains tools to help slice up long texts into individual tiddlers.
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20160416162838372" dependents="" description="Basic theme" modified="20160416162838372" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" server-url="http://tiddlywiki.com/library/v5.1.11/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/http://tiddlywiki.com/library/v5.1.11/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.11">
 <pre></pre>
 </div>
-<div created="20160416162904456" modified="20160416162904918" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
-<pre>mark</pre>
+<div created="20160416162904456" modified="20160509214116910" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
+<pre>analy</pre>
 </div>
-<div created="20160506180545081" modified="20160506234124343" title="$:/temp/search">
+<div created="20160506180545081" modified="20160509221111421" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20160416162838364" modified="20160416162838364" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/http://tiddlywiki.com/library/v5.1.11/index.html" url="http://tiddlywiki.com/library/v5.1.11/index.html">
+<div created="20160509214119619" modified="20160509214119619" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/http://tiddlywiki.com/library/v5.1.11/index.html" url="http://tiddlywiki.com/library/v5.1.11/index.html">
 <pre>loaded</pre>
 </div>
 <div created="20160416163130795" modified="20160416163130795" title="$:/theme">
