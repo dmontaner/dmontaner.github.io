@@ -36,10 +36,28 @@ datos <- lapply (datos, "[", - fuera) ## now all elements of datos should have t
 datos <- t (sapply (datos, unlist)) ## matrix
 datos <- as.data.frame (datos, stringsAsFactors = FALSE)
 
-head (datos)
+#head (datos)
 
+
+##year and order
+year <- datos[,'Details']
+year <- strsplit (year, split = ";")
+year <- sapply (year, "[", 1)
+year <- strsplit (year, split = " ")
+year <- lapply (year, rev)
+year <- sapply (year, "[", 1)
+table (year)
+
+datos[,'year'] <- as.integer (year)
+
+orden <- order (datos[,'year'], datos[,'Description'], decreasing = TRUE)
+datos <- datos[orden,]
+
+## authors
 datos[,'auth.md'] <- sub ('Montaner D', '**Montaner D**', datos[,'Description'])  ## bold
 datos[,'auth.tw'] <- sub ('Montaner D', "''Montaner D''", datos[,'Description'])  ## bold
+
+
 
 ### MARKDOWN
 datos[,'md'] <- paste0 ('1. _', datos[,'Title'], '_ ', datos[,'auth.md'],

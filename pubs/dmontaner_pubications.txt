@@ -1,188 +1,260 @@
-1.  _Brief Report: Inhibition of miR-145 Enhances Reprogramming of Human
+1.  _A Novel Role for miR-1305 in Regulation of
+    Pluripotency-Differentiation Balance, Cell Cycle, and Apoptosis in
+    Human Pluripotent Stem Cells._ Jin S, Collin J, Zhu L, MONTANER D,
+    Armstrong L, Neganova I, Lako M. Stem cells (Dayton, Ohio). 2016;
+2.  _Integrated gene set analysis for microRNA studies._ Garcia-Garcia
+    F, Panadero J, Dopazo J, MONTANER D. Bioinformatics
+    (Oxford, England). 2016;
+3.  _Brief Report: Inhibition of miR-145 Enhances Reprogramming of Human
     Dermal Fibroblasts to Induced Pluripotent Stem Cells._ Barta T,
-    Peskova L, Collin J, MONTANER D, Neganova I, et al. Stem cells
-    (Dayton, Ohio). 2016; 34(1):246-51.
-2.  _Family-based genome-wide association study in Patagonia confirms
+    Peskova L, Collin J, MONTANER D, Neganova I, Armstrong L, Lako M.
+    Stem cells (Dayton, Ohio). 2016; 34(1):246-51.
+4.  _Family-based genome-wide association study in Patagonia confirms
     the association of the DMD locus and cleft lip and palate._ Fonseca
-    RF, de Carvalho FM, Poletta FA, MONTANER D, Dopazo J, et al.
-    European journal of oral sciences. 2015;
-3.  _Babelomics 5.0: functional interpretation for new generations of
-    genomic data._ Alonso R, Salavert F, Garcia-Garcia F,
-    Carbonell-Caballero J, Bleda M, et al. Nucleic acids research.
-    2015; 43(W1):W117-21.
-4.  _Therapeutic targets for olive pollen allergy defined by gene
+    RF, de Carvalho FM, Poletta FA, MONTANER D, Dopazo J, Mereb JC,
+    Moreira MA, Seuanez HN, Vieira AR, Castilla EE, Orioli IM. European
+    journal of oral sciences. 2015;
+5.  _Therapeutic targets for olive pollen allergy defined by gene
     markers modulated by Ole e 1-derived peptides._ Calzada D, Aguerri
-    M, Baos S, MONTANER D, Mata M, et al. Molecular immunology.
-    2015; 64(2):252-61.
-5.  _A new overgrowth syndrome is due to mutations in RNF125._ Tenorio
-    J, Mansilla A, Valencia M, Martínez-Glez V, Romanelli V, et al.
-    Human mutation. 2014; 35(12):1436-41.
-6.  _Understanding disease mechanisms with models of signaling
-    pathway activities._ Sebastian-Leon P, Vidal E, Minguez P, Conesa A,
-    Tarazona S, et al. BMC systems biology. 2014; 8:121.
-7.  _A novel locus for a hereditary recurrent neuropathy on
-    chromosome 21q21._ Calpena E, Martínez-Rubio D, Arpa J, García-Peñas
-    JJ, MONTANER D, et al. Neuromuscular disorders : NMD.
-    2014; 24(8):660-5.
+    M, Baos S, MONTANER D, Mata M, Dopazo J, Quiralte J, Florido F,
+    Lahoz C, Cárdaba B. Molecular immunology. 2015; 64(2):252-61.
+6.  _Babelomics 5.0: functional interpretation for new generations of
+    genomic data._ Alonso R, Salavert F, Garcia-Garcia F,
+    Carbonell-Caballero J, Bleda M, Garcia-Alonso L, Sanchis-Juan A,
+    Perez-Gil D, Marin-Garcia P, Sanchez R, Cubuk C, Hidalgo MR, Amadoz
+    A, Hernansaiz-Ballesteros RD, Alemán A, Tarraga J, MONTANER D,
+    Medina I, Dopazo J. Nucleic acids research. 2015; 43(W1):W117-21.
+7.  _A new overgrowth syndrome is due to mutations in RNF125._ Tenorio
+    J, Mansilla A, Valencia M, Martínez-Glez V, Romanelli V, Arias P,
+    Castrejón N, Poletta F, Guillén-Navarro E, Gordo G, Mansilla E,
+    García-Santiago F, González-Casado I, Vallespín E, Palomares M, Mori
+    MA, Santos-Simarro F, García-Miñaur S, Fernández L, Mena R,
+    Benito-Sanz S, del Pozo Á, Silla JC, Ibañez K, López-Granados E,
+    Martín-Trujillo A, MONTANER D, Heath KE, Campos-Barros Á, Dopazo J,
+    Nevado J, Monk D, Ruiz-Pérez VL, Lapunzina P. Human mutation.
+    2014; 35(12):1436-41.
 8.  _Quantitative modeling of clinical, cellular, and extracellular
     matrix variables suggest prognostic indicators in cancer: a model
     in neuroblastoma._ Tadeo I, Piqueras M, MONTANER D, Villamón E,
-    Berbegall AP, et al. Pediatric research. 2014; 75(2):302-14.
-9.  _Pathway network inference from gene expression data._ Ponzoni I,
-    Nueda M, Tarazona S, Götz S, MONTANER D, et al. BMC systems biology.
-    2014; 8 Suppl 2:S7.
-10. _Differential gene-expression analysis defines a molecular pattern
-    related to olive pollen allergy._ Aguerri M, Calzada D, MONTANER D,
-    Mata M, Florido F, et al. Journal of biological regulators and
-    homeostatic agents. 2013; 27(2):337-50.
-11. _Defining the genomic signature of totipotency and pluripotency
+    Berbegall AP, Cañete A, Navarro S, Noguera R. Pediatric research.
+    2014; 75(2):302-14.
+9.  _Understanding disease mechanisms with models of signaling
+    pathway activities._ Sebastian-Leon P, Vidal E, Minguez P, Conesa A,
+    Tarazona S, Amadoz A, Armero C, Salavert F, Vidal-Puig A, MONTANER
+    D, Dopazo J. BMC systems biology. 2014; 8:121.
+10. _Pathway network inference from gene expression data._ Ponzoni I,
+    Nueda M, Tarazona S, Götz S, MONTANER D, Dussaut J, Dopazo J,
+    Conesa A. BMC systems biology. 2014; 8 Suppl 2:S7.
+11. _A novel locus for a hereditary recurrent neuropathy on
+    chromosome 21q21._ Calpena E, Martínez-Rubio D, Arpa J, García-Peñas
+    JJ, MONTANER D, Dopazo J, Palau F, Espinós C. Neuromuscular
+    disorders : NMD. 2014; 24(8):660-5.
+12. _Defining the genomic signature of totipotency and pluripotency
     during early human development._ Galan A, Diaz-Gimeno P, Poo ME,
-    Valbuena D, Sanchez E, et al. PloS one. 2013; 8(4):e62135.
-12. _Four new loci associations discovered by pathway-based and network
-    analyses of the genome-wide variability profile of
-    Hirschsprung’s disease._ Fernández RM, Bleda M, Núñez-Torres R,
-    Medina I, Luzón-Toro B, et al. Orphanet journal of rare diseases.
-    2012; 7:103.
-13. _The protease MT1-MMP drives a combinatorial proteolytic program in
-    activated endothelial cells._ Koziol A, Gonzalo P, Mota A, Pollán Á,
-    Lorenzo C, et al. FASEB journal : official publication of the
-    Federation of American Societies for Experimental Biology.
-    2012; 26(11):4481-94.
+    Valbuena D, Sanchez E, Ruiz V, Dopazo J, MONTANER D, Conesa A,
+    Simon C. PloS one. 2013; 8(4):e62135.
+13. _Differential gene-expression analysis defines a molecular pattern
+    related to olive pollen allergy._ Aguerri M, Calzada D, MONTANER D,
+    Mata M, Florido F, Quiralte J, Dopazo J, Lahoz C, Cardaba B. Journal
+    of biological regulators and homeostatic agents. 2013; 27(2):337-50.
 14. _Extensive translatome remodeling during ER stress response in
     mammalian cells._ Ventoso I, Kochetov A, MONTANER D, Dopazo J,
     Santoyo J. PloS one. 2012; 7(5):e35915.
-15. _Large-scale transcriptional profiling and functional assays reveal
+15. _The protease MT1-MMP drives a combinatorial proteolytic program in
+    activated endothelial cells._ Koziol A, Gonzalo P, Mota A, Pollán Á,
+    Lorenzo C, Colomé N, MONTANER D, Dopazo J, Arribas J, Canals F,
+    Arroyo AG. FASEB journal : official publication of the Federation of
+    American Societies for Experimental Biology. 2012; 26(11):4481-94.
+16. _Four new loci associations discovered by pathway-based and network
+    analyses of the genome-wide variability profile of
+    Hirschsprung’s disease._ Fernández RM, Bleda M, Núñez-Torres R,
+    Medina I, Luzón-Toro B, García-Alonso L, Torroglosa A, Marbà M,
+    Enguix-Riego MV, MONTANER D, Antiñolo G, Dopazo J, Borrego S.
+    Orphanet journal of rare diseases. 2012; 7:103.
+17. _Large-scale transcriptional profiling and functional assays reveal
     important roles for Rho-GTPase signalling and SCL during
     haematopoietic differentiation of human embryonic stem cells._ Yung
-    S, Ledran M, Moreno-Gimeno I, Conesa A, MONTANER D, et al. Human
-    molecular genetics. 2011; 20(24):4932-46.
-16. _Differential lipid partitioning between adipocytes and tissue
+    S, Ledran M, Moreno-Gimeno I, Conesa A, MONTANER D, Dopazo J,
+    Dimmick I, Slater NJ, Marenah L, Real PJ, Paraskevopoulou I, Bisbal
+    V, Burks D, Santibanez-Koref M, Moreno R, Mountford J, Menendez P,
+    Armstrong L, Lako M. Human molecular genetics. 2011; 20(24):4932-46.
+18. _Differential lipid partitioning between adipocytes and tissue
     macrophages modulates macrophage lipotoxicity and M2/M1 polarization
     in obese mice._ Prieur X, Mok CY, Velagapudi VR, Núñez V, Fuentes L,
-    et al. Diabetes. 2011; 60(3):797-809.
-17. _Functional genomics of 5- to 8-cell stage human embryos by
-    blastomere single-cell cDNA analysis._ Galán A, MONTANER D, Póo ME,
-    Valbuena D, Ruiz V, et al. PloS one. 2010; 5(10):e13615.
-18. _The MicroArray Quality Control (MAQC)-II study of common practices
+    MONTANER D, Ishikawa K, Camacho A, Barbarroja N, O’Rahilly S, Sethi
+    JK, Dopazo J, Orešič M, Ricote M, Vidal-Puig A. Diabetes.
+    2011; 60(3):797-809.
+19. _The MicroArray Quality Control (MAQC)-II study of common practices
     for the development and validation of microarray-based
     predictive models._ Shi L, Campbell G, Jones WD, Campagne F, Wen Z,
-    et al. Nature biotechnology. 2010; 28(8):827-38. NIHMSID:
-    NIHMS235927
-19. _Babelomics: an integrative platform for the analysis of
-    transcriptomics, proteomics and genomic data with advanced
-    functional profiling._ Medina I, Carbonell J, Pulido L, Madeira SC,
-    Goetz S, et al. Nucleic acids research. 2010; 38(Web
-    Server issue):W210-3.
-20. _Multidimensional gene set analysis of genomic data._ MONTANER D,
-    Dopazo J. PloS one. 2010; 5(4):e10348.
-21. _Hypoxia promotes efficient differentiation of human embryonic stem
+    Walker SJ, Su Z, Chu TM, Goodsaid FM, Pusztai L, Shaughnessy JD Jr,
+    Oberthuer A, Thomas RS, Paules RS, Fielden M, Barlogie B, Chen W, Du
+    P, Fischer M, Furlanello C, Gallas BD, Ge X, Megherbi DB, Symmans
+    WF, Wang MD, Zhang J, Bitter H, Brors B, Bushel PR, Bylesjo M, Chen
+    M, Cheng J, Cheng J, Chou J, Davison TS, Delorenzi M, Deng Y,
+    Devanarayan V, Dix DJ, Dopazo J, Dorff KC, Elloumi F, Fan J, Fan S,
+    Fan X, Fang H, Gonzaludo N, Hess KR, Hong H, Huan J, Irizarry RA,
+    Judson R, Juraeva D, Lababidi S, Lambert CG, Li L, Li Y, Li Z, Lin
+    SM, Liu G, Lobenhofer EK, Luo J, Luo W, McCall MN, Nikolsky Y,
+    Pennello GA, Perkins RG, Philip R, Popovici V, Price ND, Qian F,
+    Scherer A, Shi T, Shi W, Sung J, Thierry-Mieg D, Thierry-Mieg J,
+    Thodima V, Trygg J, Vishnuvajjala L, Wang SJ, Wu J, Wu Y, Xie Q,
+    Yousef WA, Zhang L, Zhang X, Zhong S, Zhou Y, Zhu S, Arasappan D,
+    Bao W, Lucas AB, Berthold F, Brennan RJ, Buness A, Catalano JG,
+    Chang C, Chen R, Cheng Y, Cui J, Czika W, Demichelis F, Deng X,
+    Dosymbekov D, Eils R, Feng Y, Fostel J, Fulmer-Smentek S, Fuscoe JC,
+    Gatto L, Ge W, Goldstein DR, Guo L, Halbert DN, Han J, Harris SC,
+    Hatzis C, Herman D, Huang J, Jensen RV, Jiang R, Johnson CD, Jurman
+    G, Kahlert Y, Khuder SA, Kohl M, Li J, Li L, Li M, Li QZ, Li S, Li
+    Z, Liu J, Liu Y, Liu Z, Meng L, Madera M, Martinez-Murillo F, Medina
+    I, Meehan J, Miclaus K, Moffitt RA, MONTANER D, Mukherjee P,
+    Mulligan GJ, Neville P, Nikolskaya T, Ning B, Page GP, Parker J,
+    Parry RM, Peng X, Peterson RL, Phan JH, Quanz B, Ren Y, Riccadonna
+    S, Roter AH, Samuelson FW, Schumacher MM, Shambaugh JD, Shi Q,
+    Shippy R, Si S, Smalter A, Sotiriou C, Soukup M, Staedtler F,
+    Steiner G, Stokes TH, Sun Q, Tan PY, Tang R, Tezak Z, Thorn B,
+    Tsyganova M, Turpaz Y, Vega SC, Visintainer R, von Frese J, Wang C,
+    Wang E, Wang J, Wang W, Westermann F, Willey JC, Woods M, Wu S, Xiao
+    N, Xu J, Xu L, Yang L, Zeng X, Zhang J, Zhang L, Zhang M, Zhao C,
+    Puri RK, Scherf U, Tong W, Wolfinger RD. Nature biotechnology.
+    2010; 28(8):827-38. NIHMSID: NIHMS235927
+20. _Hypoxia promotes efficient differentiation of human embryonic stem
     cells to functional endothelium._ Prado-Lopez S, Conesa A, Armiñán
-    A, Martínez-Losa M, Escobedo-Lucea C, et al. Stem cells
+    A, Martínez-Losa M, Escobedo-Lucea C, Gandia C, Tarazona S, Melguizo
+    D, Blesa D, MONTANER D, Sanz-González S, Sepúlveda P, Götz S,
+    O’Connor JE, Moreno R, Dopazo J, Burks DJ, Stojkovic M. Stem cells
     (Dayton, Ohio). 2010; 28(3):407-18.
-22. _Initial genomics of the human nucleolus._ Németh A, Conesa A,
-    Santoyo-Lopez J, Medina I, MONTANER D, et al. PLoS genetics.
-    2010; 6(3):e1000889.
-23. _FM19G11, a new hypoxia-inducible factor (HIF) modulator, affects
+21. _Initial genomics of the human nucleolus._ Németh A, Conesa A,
+    Santoyo-Lopez J, Medina I, MONTANER D, Péterfia B, Solovei I, Cremer
+    T, Dopazo J, Längst G. PLoS genetics. 2010; 6(3):e1000889.
+22. _FM19G11, a new hypoxia-inducible factor (HIF) modulator, affects
     stem cell differentiation status._ Moreno-Manzano V,
     Rodríguez-Jiménez FJ, Aceña-Bonilla JL, Fustero-Lardíes S, Erceg S,
-    et al. The Journal of biological chemistry. 2010; 285(2):1333-42.
-24. _DNA methylation epigenotypes in breast cancer molecular subtypes._
-    Bediaga NG, Acha-Sagredo A, Guerra I, Viguri A, Albaina C, et al.
-    Breast cancer research : BCR. 2010; 12(5):R77.
-25. _Parallel changes in gene expression in peripheral blood mononuclear
+    Dopazo J, MONTANER D, Stojkovic M, Sánchez-Puelles JM. The Journal
+    of biological chemistry. 2010; 285(2):1333-42.
+23. _Multidimensional gene set analysis of genomic data._ MONTANER D,
+    Dopazo J. PloS one. 2010; 5(4):e10348.
+24. _Babelomics: an integrative platform for the analysis of
+    transcriptomics, proteomics and genomic data with advanced
+    functional profiling._ Medina I, Carbonell J, Pulido L, Madeira SC,
+    Goetz S, Conesa A, Tárraga J, Pascual-Montano A, Nogales-Cadenas R,
+    Santoyo J, García F, Marbà M, MONTANER D, Dopazo J. Nucleic
+    acids research. 2010; 38(Web Server issue):W210-3.
+25. _Functional genomics of 5- to 8-cell stage human embryos by
+    blastomere single-cell cDNA analysis._ Galán A, MONTANER D, Póo ME,
+    Valbuena D, Ruiz V, Aguilar C, Dopazo J, Simón C. PloS one.
+    2010; 5(10):e13615.
+26. _DNA methylation epigenotypes in breast cancer molecular subtypes._
+    Bediaga NG, Acha-Sagredo A, Guerra I, Viguri A, Albaina C, Ruiz Diaz
+    I, Rezola R, Alberdi MJ, Dopazo J, MONTANER D, Renobales M,
+    Fernández AF, Field JK, Fraga MF, Liloglou T, de Pancorbo MM. Breast
+    cancer research : BCR. 2010; 12(5):R77.
+27. _Parallel changes in gene expression in peripheral blood mononuclear
     cells and the brain after maternal separation in the mouse._ van
-    Heerden JH, Conesa A, Stein DJ, MONTANER D, Russell V, et al. BMC
+    Heerden JH, Conesa A, Stein DJ, MONTANER D, Russell V, Illing N. BMC
     research notes. 2009; 2:195.
-26. _SNOW, a web-based tool for the statistical analysis of
-    protein-protein interaction networks._ Minguez P, Götz S, MONTANER
-    D, Al-Shahrour F, Dopazo J. Nucleic acids research. 2009; 37(Web
-    Server issue):W109-14.
-27. _Gene set-based analysis of polymorphisms: finding pathways or
-    biological processes associated to traits in genome-wide
-    association studies._ Medina I, MONTANER D, Bonifaci N, Pujana MA,
-    Carbonell J, et al. Nucleic acids research. 2009; 37(Web
-    Server issue):W340-4.
 28. _Gene set internal coherence in the context of
     functional profiling._ MONTANER D, Minguez P, Al-Shahrour F,
     Dopazo J. BMC genomics. 2009; 10:197.
-29. _Cryptochrome-1 expression: a new prognostic marker in B-cell
+29. _SNOW, a web-based tool for the statistical analysis of
+    protein-protein interaction networks._ Minguez P, Götz S, MONTANER
+    D, Al-Shahrour F, Dopazo J. Nucleic acids research. 2009; 37(Web
+    Server issue):W109-14.
+30. _Gene set-based analysis of polymorphisms: finding pathways or
+    biological processes associated to traits in genome-wide
+    association studies._ Medina I, MONTANER D, Bonifaci N, Pujana MA,
+    Carbonell J, Tarraga J, Al-Shahrour F, Dopazo J. Nucleic
+    acids research. 2009; 37(Web Server issue):W340-4.
+31. _Cryptochrome-1 expression: a new prognostic marker in B-cell
     chronic lymphocytic leukemia._ Lewintre EJ, Martín CR, Ballesteros
-    CG, MONTANER D, Rivera RF, et al. Haematologica. 2009; 94(2):280-4.
-30. _Analysis of chronic lymphotic leukemia transcriptomic profile:
+    CG, MONTANER D, Rivera RF, Mayans JR, García-Conde J. Haematologica.
+    2009; 94(2):280-4.
+32. _Analysis of chronic lymphotic leukemia transcriptomic profile:
     differences between molecular subgroups._ Jantus Lewintre E, Reinoso
-    Martín C, MONTANER D, Marín M, José Terol M, et al. Leukemia
-    & lymphoma. 2009; 50(1):68-79.
-31. _Direct functional assessment of the composite phenotype through
-    multivariate projection strategies._ Conesa A, Bro R, García-García
-    F, Prats JM, Götz S, et al. Genomics. 2008; 92(6):373-83.
-32. _GEPAS, a web-based tool for microarray data analysis
+    Martín C, MONTANER D, Marín M, José Terol M, Farrás R, Benet I,
+    Calvete JJ, Dopazo J, García-Conde J. Leukemia & lymphoma.
+    2009; 50(1):68-79.
+33. _CLEAR-test: combining inference for differential expression and
+    variability in microarray data analysis._ Valls J, Grau M, Solé X,
+    Hernández P, MONTANER D, Dopazo J, Peinado MA, Capellá G, Moreno V,
+    Pujana MA. Journal of biomedical informatics. 2008; 41(1):33-45.
+34. _GEPAS, a web-based tool for microarray data analysis
     and interpretation._ Tárraga J, Medina I, Carbonell J, Huerta-Cepas
-    J, Minguez P, et al. Nucleic acids research. 2008; 36(Web
-    Server issue):W308-14.
-33. _Babelomics: advanced functional profiling of transcriptomics,
-    proteomics and genomics experiments._ Al-Shahrour F, Carbonell J,
-    Minguez P, Goetz S, Conesa A, et al. Nucleic acids research. 2008;
-    36(Web Server issue):W341-6.
-34. _Molecular profiling related to poor prognosis in thyroid carcinoma.
+    J, Minguez P, Alloza E, Al-Shahrour F, Vegas-Azcárate S, Goetz S,
+    Escobar P, Garcia-Garcia F, Conesa A, MONTANER D, Dopazo J. Nucleic
+    acids research. 2008; 36(Web Server issue):W308-14.
+35. _Molecular profiling related to poor prognosis in thyroid carcinoma.
     Combining gene expression data and biological information._
     Montero-Conde C, Martín-Campos JM, Lerma E, Gimenez G,
-    Martínez-Guitarte JL, et al. Oncogene. 2008; 27(11):1554-61.
-35. _CLEAR-test: combining inference for differential expression and
-    variability in microarray data analysis._ Valls J, Grau M, Solé X,
-    Hernández P, MONTANER D, et al. Journal of biomedical informatics.
-    2008; 41(1):33-45.
-36. _Functional profiling of microarray experiments using text-mining
+    Martínez-Guitarte JL, Combalía N, MONTANER D, Matías-Guiu X, Dopazo
+    J, de Leiva A, Robledo M, Mauricio D. Oncogene.
+    2008; 27(11):1554-61.
+36. _Direct functional assessment of the composite phenotype through
+    multivariate projection strategies._ Conesa A, Bro R, García-García
+    F, Prats JM, Götz S, Kjeldahl K, MONTANER D, Dopazo J. Genomics.
+    2008; 92(6):373-83.
+37. _Babelomics: advanced functional profiling of transcriptomics,
+    proteomics and genomics experiments._ Al-Shahrour F, Carbonell J,
+    Minguez P, Goetz S, Conesa A, Tárraga J, Medina I, Alloza E,
+    MONTANER D, Dopazo J. Nucleic acids research. 2008; 36(Web
+    Server issue):W341-6.
+38. _Functional profiling of microarray experiments using text-mining
     derived bioentities._ Minguez P, Al-Shahrour F, MONTANER D,
     Dopazo J. Bioinformatics (Oxford, England). 2007; 23(22):3098-9.
-37. _ISACGH: a web-based environment for the analysis of Array CGH and
-    gene expression which includes functional profiling._ Conde L,
-    MONTANER D, Burguet-Castell J, Tárraga J, Medina I, et al. Nucleic
-    acids research. 2007; 35(Web Server issue):W81-5.
-38. _FatiGO +: a functional profiling tool for genomic data. Integration
-    of functional annotation, regulatory motifs and interaction data
-    with microarray experiments._ Al-Shahrour F, Minguez P, Tárraga J,
-    Medina I, Alloza E, et al. Nucleic acids research. 2007; 35(Web
-    Server issue):W91-6.
-39. _Evidence for systems-level molecular mechanisms of tumorigenesis._
-    Hernández P, Huerta-Cepas J, MONTANER D, Al-Shahrour F, Valls J,
-    et al. BMC genomics. 2007; 8:185.
-40. _Functional profiling and gene expression analysis of chromosomal
-    copy number alterations._ Conde L, MONTANER D, Burguet-Castell J,
-    Tárraga J, Al-Shahrour F, et al. Bioinformation. 2007; 1(10):432-5.
-41. _From genes to functional classes in the study of
-    biological systems._ Al-Shahrour F, Arbiza L, Dopazo H, Huerta-Cepas
-    J, Mínguez P, et al. BMC bioinformatics. 2007; 8:114.
-42. _Prophet, a web-based tool for class prediction using
+39. _Prophet, a web-based tool for class prediction using
     microarray data._ Medina I, MONTANER D, Tárraga J, Dopazo J.
     Bioinformatics (Oxford, England). 2007; 23(3):390-1.
-43. _The detection, treatment and control of high blood pressure in
+40. _Evidence for systems-level molecular mechanisms of tumorigenesis._
+    Hernández P, Huerta-Cepas J, MONTANER D, Al-Shahrour F, Valls J,
+    Gómez L, Capellá G, Dopazo J, Pujana MA. BMC genomics. 2007; 8:185.
+41. _ISACGH: a web-based environment for the analysis of Array CGH and
+    gene expression which includes functional profiling._ Conde L,
+    MONTANER D, Burguet-Castell J, Tárraga J, Medina I, Al-Shahrour F,
+    Dopazo J. Nucleic acids research. 2007; 35(Web Server issue):W81-5.
+42. _Functional profiling and gene expression analysis of chromosomal
+    copy number alterations._ Conde L, MONTANER D, Burguet-Castell J,
+    Tárraga J, Al-Shahrour F, Dopazo J. Bioinformation.
+    2007; 1(10):432-5.
+43. _FatiGO +: a functional profiling tool for genomic data. Integration
+    of functional annotation, regulatory motifs and interaction data
+    with microarray experiments._ Al-Shahrour F, Minguez P, Tárraga J,
+    Medina I, Alloza E, MONTANER D, Dopazo J. Nucleic acids research.
+    2007; 35(Web Server issue):W91-6.
+44. _From genes to functional classes in the study of
+    biological systems._ Al-Shahrour F, Arbiza L, Dopazo H, Huerta-Cepas
+    J, Mínguez P, MONTANER D, Dopazo J. BMC bioinformatics. 2007; 8:114.
+45. _Self-reported smoking cessation interventions were not associated
+    with quitting in older women._ Schroeder K, Lawlor DA, MONTANER D,
+    Ebrahim S. Journal of clinical epidemiology. 2006; 59(6):622-8.
+46. _The detection, treatment and control of high blood pressure in
     older British adults: cross-sectional findings from the British
     Women’s Heart and Health Study and the British Regional
     Heart Study._ Patel R, Lawlor DA, Whincup P, MONTANER D, Papacosta
-    O, et al. Journal of human hypertension. 2006; 20(10):733-41.
-44. _BABELOMICS: a systems biology perspective in the functional
-    annotation of genome-scale experiments._ Al-Shahrour F, Minguez P,
-    Tárraga J, MONTANER D, Alloza E, et al. Nucleic acids research.
-    2006; 34(Web Server issue):W472-6.
-45. _Next station in microarray data analysis: GEPAS._ MONTANER D,
-    Tárraga J, Huerta-Cepas J, Burguet J, Vaquerizas JM, et al. Nucleic
-    acids research. 2006; 34(Web Server issue):W486-91.
-46. _Self-reported smoking cessation interventions were not associated
-    with quitting in older women._ Schroeder K, Lawlor DA, MONTANER D,
-    Ebrahim S. Journal of clinical epidemiology. 2006; 59(6):622-8.
-47. _Selective pressures at a codon-level predict deleterious mutations
+    O, Brindle P, Ebrahim S. Journal of human hypertension.
+    2006; 20(10):733-41.
+47. _Next station in microarray data analysis: GEPAS._ MONTANER D,
+    Tárraga J, Huerta-Cepas J, Burguet J, Vaquerizas JM, Conde L,
+    Minguez P, Vera J, Mukherjee S, Valls J, Pujana MA, Alloza E,
+    Herrero J, Al-Shahrour F, Dopazo J. Nucleic acids research. 2006;
+    34(Web Server issue):W486-91.
+48. _Selective pressures at a codon-level predict deleterious mutations
     in human disease genes._ Arbiza L, Duchi S, MONTANER D, Burguet J,
-    Pantoja-Uceda D, et al. Journal of molecular biology.
-    2006; 358(5):1390-404.
-48. _How acceptable are innovative health-care technologies? A survey of
-    public beliefs and attitudes in England and Wales._ Calnan M,
-    MONTANER D, Horne R. Social science & medicine (1982).
-    2005; 60(9):1937-48.
-49. _Coronary heart disease prevention in clinical practice: are
+    Pantoja-Uceda D, Pineda-Lucena A, Dopazo J, Dopazo H. Journal of
+    molecular biology. 2006; 358(5):1390-404.
+49. _BABELOMICS: a systems biology perspective in the functional
+    annotation of genome-scale experiments._ Al-Shahrour F, Minguez P,
+    Tárraga J, MONTANER D, Alloza E, Vaquerizas JM, Conde L, Blaschke C,
+    Vera J, Dopazo J. Nucleic acids research. 2006; 34(Web
+    Server issue):W472-6.
+50. _Coronary heart disease prevention in clinical practice: are
     patients with diabetes special? Evidence from two studies of older
     men and women._ Emberson JR, Whincup PH, Lawlor DA, MONTANER D,
     Ebrahim S. Heart (British Cardiac Society). 2005; 91(4):451-5.
-50. _Clustering of risk factors and social class in childhood and
+51. _How acceptable are innovative health-care technologies? A survey of
+    public beliefs and attitudes in England and Wales._ Calnan M,
+    MONTANER D, Horne R. Social science & medicine (1982).
+    2005; 60(9):1937-48.
+52. _Clustering of risk factors and social class in childhood and
     adulthood in British women’s heart and health study: cross
     sectional analysis._ Ebrahim S, MONTANER D, Lawlor DA. BMJ (Clinical
     research ed.). 2004; 328(7444):861.
