@@ -1,3 +1,4 @@
 
-# ignore the backups created by TiddlyWiki
+# ignore folders
 wikibackups/
+cv/logs/
