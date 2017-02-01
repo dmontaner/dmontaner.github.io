@@ -1,4 +1,4 @@
 
 # ignore folders
 wikibackups/
-cv/logs/
+*/logs/
