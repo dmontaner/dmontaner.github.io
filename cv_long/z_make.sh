@@ -14,6 +14,7 @@ rm *.pdf
 xelatex david_montaner_cv_long.tex
 
 ## keep logs
+mkdir logs
 mv *.aux logs/
 mv *.log logs/
 mv *.out logs/
