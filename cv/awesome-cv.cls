@@ -10,7 +10,7 @@
 %
 % Notes:
 % 1) This class file defines the structure and layout of the template file (cv.tex, resume.tex).
-% 2) It has been written in such a way that under most circumstances you 
+% 2) It has been written in such a way that under most circumstances you
 % should not need to edit it.
 %
 % Class license:
@@ -21,7 +21,7 @@
 %-------------------------------------------------------------------------------
 %                Identification
 %-------------------------------------------------------------------------------
-\ProvidesClass{awesome-cv}[2015/12/14 v1.3 Awesome Curriculum Vitae Class]
+\ProvidesClass{awesome-cv}[2017/02/05 v1.6.1 Awesome Curriculum Vitae Class]
 \NeedsTeXFormat{LaTeX2e}
 
 
@@ -71,14 +71,17 @@
 % To support LaTeX quoting style
 \defaultfontfeatures{Ligatures=TeX}
 % Needed to manage math fonts
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage{unicode-math}
 % Needed to use icons from font-awesome
 % (https://github.com/posquit0/latex-fontawesome)
 \RequirePackage{fontawesome}
+\RequirePackage[default,opentype]{sourcesanspro}
+% Needed for the photo ID
+\RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
 % Needed to deal hyperlink
-\RequirePackage[hidelinks]{hyperref}
+\RequirePackage[hidelinks,unicode]{hyperref}
 \hypersetup{%
   pdftitle={},
   pdfauthor={},
@@ -144,27 +147,21 @@
 \definecolor{awesome-darknight}{HTML}{131A28}
 \colorlet{awesome}{awesome-red}
 
+% Boolean value to switch section color highlighting
+\newbool{acvSectionColorHighlight}
+\setbool{acvSectionColorHighlight}{true}
+
 % Awesome section color
-\newcounter{colorCounter}
 \def\@sectioncolor#1#2#3{%
-  {%
-    \color{%
-      \ifcase\value{colorCounter}%
-        awesome\or%
-        awesome\or%
-        awesome\or%
-        awesome\or%
-        awesome\else%
-        awesome\fi%
-    } #1#2#3%
-  }%
-  \stepcounter{colorCounter}%
+  \ifbool{acvSectionColorHighlight}{{\color{awesome}#1#2#3}}{#1#2#3}%
 }
 
 
 %-------------------------------------------------------------------------------
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
+% Set the FontAwesome font to be up-to-date.
+\newfontfamily\FA[Path=\@fontdir]{FontAwesome}
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
   Path=\@fontdir,
@@ -182,31 +179,9 @@
   BoldItalicFont=*-MediumItalic,
 ]{Roboto}
 
-% Set font for footer (default is Source Sans Pro)
-\newfontfamily\footerfont[
-  Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-It,
-  BoldFont=*-Bold
-]{SourceSansPro}
-
-% Set font for body (default is Source Sans Pro)
-\newfontfamily\bodyfont[
-  Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-It,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldIt
-]{SourceSansPro}
-
-\newfontfamily\bodyfontlight[
-  Path=\@fontdir,
-  UprightFont=*-Light,
-  ItalicFont=*-LightIt,
-  BoldFont=*-Semibold,
-  BoldItalicFont=*-SemiboldIt
-]{SourceSansPro}
-
+\newcommand*{\footerfont}{\sourcesanspro}
+\newcommand*{\bodyfont}{\sourcesanspro}
+\newcommand*{\bodyfontlight}{\sourcesansprolight}
 
 %-------------------------------------------------------------------------------
 %                Configuration for styles
@@ -222,7 +197,7 @@
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
-\newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{graytext}}
+\newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
@@ -262,6 +237,23 @@
 %-------------------------------------------------------------------------------
 %                Commands for personal information
 %-------------------------------------------------------------------------------
+% Define photo ID
+% Usage: \photo[circle|rectangle,edge|noedge,left|right]{<path-to-image>}
+\newcommand{\photo}[2][circle,edge,left]{%
+  \def\@photo{#2}
+  \@for\tmp:=#1\do{%
+    \ifthenelse{\equal{\tmp}{circle} \or \equal{\tmp}{rectangle}}%
+      {\let\@photoshape\tmp}{}%
+    \ifthenelse{\equal{\tmp}{edge} \or \equal{\tmp}{noedge}}%
+      {\let\@photoedge\tmp}{}%
+    \ifthenelse{\equal{\tmp}{left} \or \equal{\tmp}{right}}%
+      {\let\@photoalign\tmp}{}%
+  }%
+}
+\def\@photoshape{circle}
+\def\@photoedge{edge}
+\def\@photoalign{left}
+
 % Define writer's name
 % Usage: \name{<firstname>}{<lastname>}
 % Usage: \firstname{<firstname>}
@@ -297,9 +289,9 @@
 % Usage: \github{<github-nick>}
 \newcommand*{\github}[1]{\def\@github{#1}}
 
-% Defines writer's linked-in (optional)
-% Usage: \linkedin{<linked-in-nick>}
-\newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
+% Defines writer's gitlab (optional)
+% Usage: \gitlab{<gitlab-nick>}
+\newcommand*{\gitlab}[1]{\def\@gitlab{#1}}
 
 % Defines writer's stackoverflow profile (optional)
 % Usage: \stackoverflow{<so userid>}{<so username>}
@@ -307,13 +299,29 @@
 %       would be \stackoverflow{123456}{sam-smith}
 \newcommand*{\stackoverflow}[2]{\def\@stackoverflowid{#1}\def\@stackoverflowname{#2}}
 
+% Defines writer's linked-in (optional)
+% Usage: \linkedin{<linked-in-nick>}
+\newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
+
+% Usage: \twitter{<twitter handle>}
+\newcommand*{\twitter}[1]{\def\@twitter{#1}}
+
 % Defines writer's skype (optional)
 % Usage: \skype{<skype account>}
 \newcommand*{\skype}[1]{\def\@skype{#1}}
 
+% Defines writer's reddit (optional)
+% Usage: \reddit{<reddit account>}
+\newcommand*{\reddit}[1]{\def\@reddit{#1}}
+
+% Defines writer's xing (optional)
+% Usage: \xing{<xing name>}
+\newcommand*{\xing}[1]{\def\@xing{#1}}
+
 % Defines writer's twitter (optional)
-% Usage: \twitter{<twitter handle>}
-\newcommand*{\twitter}[1]{\def\@twitter{#1}}
+% Defines writer's extra informations (optional)
+% Usage: \extrainfo{<extra informations>}
+\newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
 
 % Defines writer's quote (optional)
 % Usage: \quote{<quote>}
@@ -356,7 +364,8 @@
 %-------------------------------------------------------------------------------
 %                Commands for extra
 %-------------------------------------------------------------------------------
-% Define helper macros a user can change easily in header
+%% Define helper macros a user can change easily
+% Header
 \newcommand{\acvHeaderNameDelim}{\space}
 \newcommand{\acvHeaderAfterNameSkip}{.4mm}
 \newcommand{\acvHeaderAfterPositionSkip}{.4mm}
@@ -365,6 +374,11 @@
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 \newcommand{\acvHeaderAfterSocialSkip}{6mm}
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
+
+% Others
+\newcommand{\acvSectionTopSkip}{3mm}
+\newcommand{\acvSectionContentTopSkip}{2.5mm}
+
 
 %-------------------------------------------------------------------------------
 %                Commands for utilities
@@ -386,8 +400,35 @@
 %-------------------------------------------------------------------------------
 % Define a header for CV
 % Usage: \makecvheader
-\newcommand*{\makecvheader}{%
-  \begin{center}
+\newcommand*{\makecvheader}[1][C]{%
+  \newcommand*{\drawphoto}{%
+    \ifthenelse{\isundefined{\@photo}}{}{%
+      \newlength{\photodim}
+      \ifthenelse{\equal{\@photoshape}{circle}}%
+        {\setlength{\photodim}{1.3cm}}%
+        {\setlength{\photodim}{1.8cm}}%
+      \ifthenelse{\equal{\@photoedge}{edge}}%
+        {\def\@photoborder{darkgray}}%
+        {\def\@photoborder{none}}%
+      \begin{tikzpicture}%
+        \node[\@photoshape, draw=\@photoborder, line width=0.3mm, inner sep=\photodim, fill overzoom image=\@photo] () {};
+      \end{tikzpicture}
+    }%
+  }
+  \newlength{\headertextwidth}
+  \newlength{\headerphotowidth}
+  \ifthenelse{\isundefined{\@photo}}{
+    \setlength{\headertextwidth}{\textwidth}
+    \setlength{\headerphotowidth}{0cm}
+  }{%
+    \setlength{\headertextwidth}{0.76\textwidth}
+    \setlength{\headerphotowidth}{0.24\textwidth}
+  }%
+  \begin{minipage}[c]{\headerphotowidth}%
+    \ifthenelse{\equal{\@photoalign}{left}}{\raggedright\drawphoto}{}
+  \end{minipage}
+  \begin{minipage}[c]{\headertextwidth}
+    \ifthenelse{\equal{#1}{L}}{\raggedright}{\ifthenelse{\equal{#1}{R}}{\raggedleft}{\centering}}
     \headerfirstnamestyle{\@firstname}\headerlastnamestyle{{}\acvHeaderNameDelim\@lastname}%
     \\[\acvHeaderAfterNameSkip]%
     \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\[\acvHeaderAfterPositionSkip]}}%
@@ -404,78 +445,77 @@
       \ifthenelse{\isundefined{\@email}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false}%
-            }%
-            {\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{mailto:\@email}{\faEnvelope\acvHeaderIconSep\@email}%
         }%
       \ifthenelse{\isundefined{\@homepage}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false}%
-            }%
-            {\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{http://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false}%
-            }%
-            {\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://github.com/\@github}{\faGithubSquare\acvHeaderIconSep\@github}%
+        }%
+      \ifthenelse{\isundefined{\@gitlab}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://gitlab.com/\@gitlab}{\faGitlab\acvHeaderIconSep\@gitlab}%
         }%
       \ifthenelse{\isundefined{\@stackoverflowid}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false} %
-            }%
-            {\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\acvHeaderIconSep\@stackoverflowname}%
         }%
       \ifthenelse{\isundefined{\@linkedin}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false}%
-            }%
-            {\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\acvHeaderIconSep\@linkedin}%
         }%
       \ifthenelse{\isundefined{\@twitter}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false} %
-            }%
-            {\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://twitter.com/\@twitter}{\faTwitter\acvHeaderIconSep\@twitter}%
         }%
       \ifthenelse{\isundefined{\@skype}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false} %
-            }%
-            {\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \faSkype\acvHeaderIconSep\@skype%
+        }%
+      \ifthenelse{\isundefined{\@reddit}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://www.reddit.com/user/\@reddit}{\faReddit\acvHeaderIconSep\@reddit}%
+        }%
+      \ifthenelse{\isundefined{\@xing}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://www.xing.com/profile/\@xing}{\faXingSquare\acvHeaderIconSep\@xing}
+        }%
+      \ifthenelse{\isundefined{\@extrainfo}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \@extrainfo%
         }%
     } \\[\acvHeaderAfterSocialSkip]%
     \ifthenelse{\isundefined{\@quote}}%
       {}%
       {\headerquotestyle{\@quote\\}\vspace{\acvHeaderAfterQuoteSkip}}%
-  \end{center}%
+  \end{minipage}%
+  \begin{minipage}[c]{\headerphotowidth}%
+    \ifthenelse{\equal{\@photoalign}{right}}{\raggedleft\drawphoto}{}
+  \end{minipage}
 }
 
 % Define a footer for CV
@@ -484,37 +524,40 @@
   \fancyfoot{}
   \fancyfoot[L]{\footerstyle{#1}}
   \fancyfoot[C]{\footerstyle{#2}}
-  \fancyfoot[R]{\footerstyle{#3}} 
+  \fancyfoot[R]{\footerstyle{#3}}
 }
 
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
-  \par\addvspace{1.5ex}
-  \phantomsection{}
+  \vspace{\acvSectionTopSkip}
   \sectionstyle{#1}
+  \phantomsection
   \color{gray}\vhrulefill{0.9pt}
-  \par\nobreak\addvspace{1ex}
 }
 
 % Define a subsection for CV
 % Usage: \cvsubsection{<subsection-title>}
 \newcommand{\cvsubsection}[1]{%
-  \phantomsection{}
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-3mm}
   \subsectionstyle{#1}
+  \phantomsection
 }
 
 % Define a paragraph for CV
 \newenvironment{cvparagraph}{%
+  \vspace{\acvSectionContentTopSkip}
   \vspace{-3mm}
   \paragraphstyle
 }{%
-  \vspace{1mm}
+  \par
+  \vspace{2mm}
 }
-
 
 % Define an environment for cventry
 \newenvironment{cventries}{%
+  \vspace{\acvSectionContentTopSkip}
   \begin{center}
 }{%
   \end{center}
@@ -522,6 +565,7 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
+  \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -529,8 +573,8 @@
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} \\
-  \end{tabular*}
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+  \end{tabular*}%
 }
 
 % Define an environment for cvsubentry
@@ -547,7 +591,7 @@
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \setlength\leftskip{0.2cm}
     \subentrytitlestyle{#2} & \ifthenelse{\equal{#1}{}}
-      {\subentrydatestyle{#3}}{} 
+      {\subentrydatestyle{#3}}{}
     \ifthenelse{\equal{#1}{}}
       {}
       {\subentrypositionstyle{#1} & \subentrydatestyle{#3} \\}
@@ -559,6 +603,8 @@
 
 % Define an environment for cvhonor
 \newenvironment{cvhonors}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
@@ -575,6 +621,8 @@
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
@@ -591,7 +639,7 @@
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{-4mm}
+  \vspace{-4.0mm}
   \begin{justify}
   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
     \setlength{\parskip}{0pt}
@@ -599,7 +647,7 @@
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{-2mm}
+  \vspace{-4.0mm}
 }
 
 
@@ -637,7 +685,7 @@
   \ifthenelse{\isundefined{\@lettertitle}}
     {}
     {\lettertitlestyle{\@lettertitle} \\}
-  \lettertextstyle{\@letteropening} 
+  \lettertextstyle{\@letteropening}
 }
 
 % Define a closing of the cover letter
